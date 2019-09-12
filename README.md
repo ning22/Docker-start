@@ -14,6 +14,12 @@ https://yeasy.gitbooks.io/docker_practice/install/ubuntu.html <br />
 ### Install Docker Engine:
 Instructions are available in the Docker website:
 https://docs.docker.com/install/linux/docker-ce/ubuntu/ <br />
+```
+$ sudo apt-get update
+$ sudo apt-get install docker-engine
+$ sudo service docker start
+$ sudo docker run hello-world
+```
 * Docker Survival commands:
 ```
 ## List Docker CLI commands
@@ -96,34 +102,24 @@ docker run --rm -it --init \
   anibali/pytorch python3 main.py
 ```
 ## Create Docker images with Dockerfile:
-For details, see [Dockerfile-reference](https://docs.docker.com/engine/reference/builder/).
+For details, see [Dockerfile-reference](https://docs.docker.com/engine/reference/builder/), [Dockerfile-practice](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/). 
 ```
 mkdir ~/my_build
 cd ~/my_build
 touch Dockerfile
 ```
+
 ### Dockerfile commands:
-* FROM – Select the base image to build the new image on top of
-``` 
-FROM ubuntu:latest
-```
-* RUN – Specify commands to make changes to your Image and subsequently the Containers started from this Image. This includes updating packages, installing software, adding users, creating an initial database, setting up certificates, etc. These are the commands you would run at the command line to install and configure your application. This is one of the most important dockerfile directives.
-```
-RUN apt-get update && apt-get upgrade -y && apt-get install -y nginx && rm -rf /var/lib/apt/lists/*
-```
-* ADD – Defines files to copy from the Host file system onto the Container
-``` 
-ADD ./local/config.file /etc/service/config.file
-```
-* ENV – Set/modify the environment variables within Containers created from the Image.
-* EXPOSE – Define which Container ports to expose
-* LABEL maintainer – Optional field to let you identify yourself as the maintainer of this image. This is just a label (it used to be a dedicated Docker directive).
-* CMD – This is the command that will run when the Container starts
-* ENTRYPOINT – Sets the default application used every time a Container is created from the Image. If used in conjunction with CMD, you can remove the application and just define the arguments there
-* USER – Define the default User all commands will be run as within any Container created from your Image. It can be either a UID or username
-* VOLUME – Creates a mount point within the Container linking it back to file systems accessible by the Docker Host. New Volumes get populated with the pre-existing contents of the specified location in the image. It is specially relevant to mention is that defining Volumes in a Dockerfile can lead to issues. Volumes should be managed with docker-compose or “docker run” commands. Volumes are optional. If your application does not have any state (and most web applications work like this) then you don’t need to use volumes.
-* WORKDIR – Define the default working directory for the command defined in the “ENTRYPOINT” or “CMD” instructions
+https://docs.docker.com/develop/develop-images/dockerfile_best-practices/ <br />
+https://docs.docker.com/engine/reference/builder/
 
+* An Example of Dockerfile
+https://github.com/anibali/docker-pytorch/blob/master/Dockerfile.template
 
+### Build Docker image and run the container:
+https://docs.docker.com/engine/reference/builder/
+```
+$ docker build
 
+```
  
