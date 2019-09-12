@@ -12,7 +12,7 @@ https://yeasy.gitbooks.io/docker_practice/install/ubuntu.html <br />
 ## Requirements: 
 ### Install Docker Engine:
 Instructions are available in the Docker website:
-[https://docs.docker.com/install/linux/docker-ce/ubuntu/] <br />
+https://docs.docker.com/install/linux/docker-ce/ubuntu/ <br />
 * Docker Survival commands:
 ```
 ## List Docker CLI commands
@@ -54,5 +54,16 @@ docker tag <image> username/repository:tag  # Tag <image> for upload to registry
 docker push username/repository:tag            # Upload tagged image to registry
 docker run username/repository:tag                   # Run image from a registry
 ```
-### 
+```
+docker stack ls                                            # List stacks or apps
+docker stack deploy -c <composefile> <appname>  # Run the specified Compose file
+docker service ls                 # List running services associated with an app
+docker service ps <service>                  # List tasks associated with an app
+docker inspect <task or container>                   # Inspect task or container
+docker container ls -q                                      # List container IDs
+docker stack rm <appname>                             # Tear down an application
+docker swarm leave --force      # Take down a single node swarm from the manager
+```
+### CUDA requirements:
+Firstly, ensure that you install the appropriate NVIDIA drivers and libraries. You will also need to install nvidia-docker2 to enable GPU device access within Docker containers. This can be found at NVIDIA/nvidia-docker.
  
