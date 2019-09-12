@@ -80,7 +80,20 @@ $ docker pull tensorflow/tensorflow:devel-gpu           # nightly dev release w/
 $ docker pull tensorflow/tensorflow:latest-gpu-jupyter  # latest release w/ GPU support and Jupyter
 ```
 ### Start a Docker Container:
-
+For details, see [docker-run-reference](https://docs.docker.com/engine/reference/run/)
+For example, you can run the following commends
+```
+$ docker run --runtime=nvidia -it tensorflow/tensorflow:latest-gpu bash
+```
+```
+docker run --rm -it --init \
+  --runtime=nvidia \
+  --ipc=host \
+  --user="$(id -u):$(id -g)" \
+  --volume="$PWD:/app" \
+  -e NVIDIA_VISIBLE_DEVICES=0 \
+  anibali/pytorch python3 main.py
+```
 
 
  
