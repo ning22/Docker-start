@@ -69,17 +69,17 @@ docker swarm leave --force      # Take down a single node swarm from the manager
 Firstly, ensure that you install the appropriate NVIDIA drivers and libraries. You will also need to install ```nvidia-docker2``` to enable GPU device access within Docker containers. This can be found at [NVIDIA/nvidia-docker](https://github.com/NVIDIA/nvidia-docker).
 ### Prebuilt Docker images:
 Pre-built images are available on Docker Hub: <br />
-For example, you can download the CUDA 10.0 version with pytorch: [Pytorch Docker image](https://hub.docker.com/r/anibali/pytorch/) <br />:
+For example, you can download the CUDA 10.0 version with pytorch: [Pytorch Docker image](https://hub.docker.com/r/anibali/pytorch/)
 ```
 $ docker pull anibali/pytorch:cuda-10.0
 ```
-You can download TensorFlow release images to your machine:
+You can download TensorFlow release images to your machine [Tensorflow Docker image](https://www.tensorflow.org/install/docker):
 ```
 $ docker pull tensorflow/tensorflow                     # latest stable release
 $ docker pull tensorflow/tensorflow:devel-gpu           # nightly dev release w/ GPU support
 $ docker pull tensorflow/tensorflow:latest-gpu-jupyter  # latest release w/ GPU support and Jupyter
-
 ```
+### Start a Docker Container:
 
 
 
