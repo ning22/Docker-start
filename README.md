@@ -1,6 +1,6 @@
 # Docker
 
-* Helpful links: 
+## Helpful links: 
 english <br />
 https://docs.docker.com/ <br />
 http://hua-zhou.github.io/teaching/biostatm280-2019winter/slides/14-docker/docker.html <br />
@@ -11,4 +11,11 @@ https://yeasy.gitbooks.io/docker_practice/install/ubuntu.html <br />
 
 ## Requirements: 
 ### Install Docker Engine:
-* sudo apt
+```sudo
+ <?php
+ $CONFIG = array(
+    // other options
+    // ...
+    'debug' => true,
+ );
+ ```
