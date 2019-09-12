@@ -65,5 +65,5 @@ docker stack rm <appname>                             # Tear down an application
 docker swarm leave --force      # Take down a single node swarm from the manager
 ```
 ### CUDA requirements:
-Firstly, ensure that you install the appropriate NVIDIA drivers and libraries. You will also need to install nvidia-docker2 to enable GPU device access within Docker containers. This can be found at NVIDIA/nvidia-docker.
+Firstly, ensure that you install the appropriate NVIDIA drivers and libraries. You will also need to install ```nvidia-docker2``` to enable GPU device access within Docker containers. This can be found at NVIDIA/nvidia-docker.
  
