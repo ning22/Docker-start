@@ -5,6 +5,7 @@ English <br />
 https://docs.docker.com/ <br />
 http://hua-zhou.github.io/teaching/biostatm280-2019winter/slides/14-docker/docker.html <br />
 https://hub.docker.com/search/?q=&type=image <br />
+https://www.tensorflow.org/install/docker <br />
 Chinese <br />
 https://cshihong.github.io/2018/04/02/Docker%E5%9F%BA%E7%A1%80%E5%8E%9F%E7%90%86/ <br />
 https://yeasy.gitbooks.io/docker_practice/install/ubuntu.html <br />
@@ -66,4 +67,10 @@ docker swarm leave --force      # Take down a single node swarm from the manager
 ```
 ### CUDA requirements:
 Firstly, ensure that you install the appropriate NVIDIA drivers and libraries. You will also need to install ```nvidia-docker2``` to enable GPU device access within Docker containers. This can be found at [NVIDIA/nvidia-docker](https://github.com/NVIDIA/nvidia-docker).
+### Prebuilt Docker images:
+Pre-built images are available on Docker Hub: <br />
+[Tensorflow Docker image](https://www.tensorflow.org/install/docker)
+[Pytorch Docker image](https://hub.docker.com/r/anibali/pytorch/)
+
+
  
