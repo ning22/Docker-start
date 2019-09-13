@@ -1,25 +1,10 @@
 # Docker
 
-## Helpful links: 
-English <br />
-https://docs.docker.com/ <br />
-http://hua-zhou.github.io/teaching/biostatm280-2019winter/slides/14-docker/docker.html <br />
-https://hub.docker.com/search/?q=&type=image <br />
-https://www.tensorflow.org/install/docker <br />
-Chinese <br />
-https://cshihong.github.io/2018/04/02/Docker%E5%9F%BA%E7%A1%80%E5%8E%9F%E7%90%86/ <br />
-https://yeasy.gitbooks.io/docker_practice/install/ubuntu.html <br />
-
 ## Requirements: 
 ### Install Docker Engine:
 Instructions are available in the Docker website:
 https://docs.docker.com/install/linux/docker-ce/ubuntu/ <br />
-```
-$ sudo apt-get update
-$ sudo apt-get install docker-engine
-$ sudo service docker start
-$ sudo docker run hello-world
-```
+
 * Docker Survival commands:
 ```
 ## List Docker CLI commands
@@ -122,4 +107,18 @@ https://docs.docker.com/engine/reference/builder/
 $ docker build
 
 ```
- 
+## Helpful notes:
+* Permission: <br />
+If your current user can't access the docker engine due to lacking permissions to access the unix socket to communicate with the enigne, run the following command and then completely log out of your account and log back in (or exit your SSH session or reboot the computer).
+```
+sudo usermod -a -G docker $USER
+```
+* Links: <br />
+English <br />
+https://docs.docker.com/ <br />
+http://hua-zhou.github.io/teaching/biostatm280-2019winter/slides/14-docker/docker.html <br />
+https://hub.docker.com/search/?q=&type=image <br />
+https://www.tensorflow.org/install/docker <br />
+Chinese <br />
+https://cshihong.github.io/2018/04/02/Docker%E5%9F%BA%E7%A1%80%E5%8E%9F%E7%90%86/ <br />
+https://yeasy.gitbooks.io/docker_practice/install/ubuntu.html <br />
