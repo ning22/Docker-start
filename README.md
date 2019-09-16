@@ -113,6 +113,11 @@ If your current user can't access the docker engine due to lacking permissions t
 ```
 sudo usermod -a -G docker $USER
 ```
+* remove docker image, error response from daemon
+```
+sudo docker ps -a -q --filter "status=exited" | xargs sudo docker rm
+sudo docker rmi `sudo docker images -q --filter "dangling=true"`
+```
 * Links: <br />
 English <br />
 https://docs.docker.com/ <br />
