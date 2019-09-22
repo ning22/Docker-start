@@ -27,7 +27,6 @@ docker container ls
 docker container ls --all
 docker container ls -a -q
 ```
-
 ```
 docker build -t friendlyhello .  # Create image using this directory's Dockerfile
 docker run -p 4000:80 friendlyhello  # Run "friendlyname" mapping port 4000 to 80
@@ -71,21 +70,6 @@ You can also download the CUDA 10.0 version with pytorch: [Pytorch Docker image]
 ```
 $ docker pull anibali/pytorch:cuda-10.0
 ```
-## Start a Docker Container:
-For details, see [docker-run-reference](https://docs.docker.com/engine/reference/run/).
-For example, you can run the following commends
-```
-$ docker run --runtime=nvidia -it tensorflow/tensorflow:latest-gpu bash
-```
-```
-docker run --rm -it --init \
-  --runtime=nvidia \
-  --ipc=host \
-  --user="$(id -u):$(id -g)" \
-  --volume="$PWD:/app" \
-  -e NVIDIA_VISIBLE_DEVICES=0 \
-  anibali/pytorch python3 main.py
-```
 ## Create Docker images with Dockerfile:
 For details, see [Dockerfile-reference](https://docs.docker.com/engine/reference/builder/), [Dockerfile-practice](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/). 
 ```
@@ -105,8 +89,23 @@ https://github.com/anibali/docker-pytorch/blob/master/Dockerfile.template
 https://docs.docker.com/engine/reference/builder/
 ```
 $ docker build
-
 ```
+## Start a Docker Container:
+For details, see [docker-run-reference](https://docs.docker.com/engine/reference/run/).
+For example, you can run the following commends
+```
+$ docker run --runtime=nvidia -it tensorflow/tensorflow:latest-gpu bash
+```
+```
+docker run --rm -it --init \
+  --runtime=nvidia \
+  --ipc=host \
+  --user="$(id -u):$(id -g)" \
+  --volume="$PWD:/app" \
+  -e NVIDIA_VISIBLE_DEVICES=0 \
+  anibali/pytorch python3 main.py
+```
+
 ## Helpful notes:
 * Permission: <br />
 If your current user can't access the docker engine due to lacking permissions to access the unix socket to communicate with the enigne, run the following command and then completely log out of your account and log back in (or exit your SSH session or reboot the computer).
