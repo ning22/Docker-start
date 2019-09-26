@@ -88,7 +88,7 @@ https://github.com/anibali/docker-pytorch/blob/master/Dockerfile.template
 ### Build Docker image and run the container:
 https://docs.docker.com/engine/reference/builder/
 ```
-$ docker build -t <tag-name>
+$ docker build -t <tag-name> <directory>
 ```
 ## Start a Docker Container:
 For details, see [docker-run-reference](https://docs.docker.com/engine/reference/run/).
