@@ -117,6 +117,9 @@ sudo usermod -a -G docker $USER
 sudo docker ps -a -q --filter "status=exited" | xargs sudo docker rm
 sudo docker rmi `sudo docker images -q --filter "dangling=true"`
 ```
+* Docker tzdata
+https://dawnbringer.net/blog/600/Docker:%20tzdata
+
 * Links: <br />
 English <br />
 https://docs.docker.com/ <br />
