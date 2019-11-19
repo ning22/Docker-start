@@ -83,7 +83,7 @@ https://docs.docker.com/develop/develop-images/dockerfile_best-practices/ <br />
 https://docs.docker.com/engine/reference/builder/
 
 * An Example of Dockerfile
-https://github.com/anibali/docker-pytorch/blob/master/Dockerfile.template
+https://github.com/anibali/docker-pytorch/blob/master/Dockerfile.template <br />
 https://github.com/waleedka/modern-deep-learning-docker
 
 ### Build Docker image and run the container:
