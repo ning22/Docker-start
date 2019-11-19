@@ -84,6 +84,7 @@ https://docs.docker.com/engine/reference/builder/
 
 * An Example of Dockerfile
 https://github.com/anibali/docker-pytorch/blob/master/Dockerfile.template
+https://github.com/waleedka/modern-deep-learning-docker
 
 ### Build Docker image and run the container:
 https://docs.docker.com/engine/reference/builder/
