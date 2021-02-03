@@ -107,6 +107,12 @@ docker run --rm -it --init \
   anibali/pytorch python3 main.py
 ```
 
+## Commit changes to a docker image:
+```
+$ docker ps -a # display a list of launched containers
+$ docker commit [CONTAINER_ID] [new_image_name]
+```
+
 ## Helpful notes:
 * Permission: <br />
 If your current user can't access the docker engine due to lacking permissions to access the unix socket to communicate with the enigne, run the following command and then completely log out of your account and log back in (or exit your SSH session or reboot the computer).
