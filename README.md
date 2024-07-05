@@ -55,6 +55,17 @@ docker container ls -q                                      # List container IDs
 docker stack rm <appname>                             # Tear down an application
 docker swarm leave --force      # Take down a single node swarm from the manager
 ```
+## change the docker installation directory
+```
+service docker stop
+ps faux
+ls /var/lib/docker/
+tar -zcC /var/lib docker > /mnt/pd0/var_lib_docker-backup-$(date +%s).tar.gz
+mv /var/lib/docker /mnt/pd0/docker
+ln -s /mnt/pd0/docker /var/lib/docker
+service docker start
+```
+
 ### CUDA requirements:
 Firstly, ensure that you install the appropriate NVIDIA drivers and libraries. You will also need to install ```nvidia-docker2``` to enable GPU device access within Docker containers. This can be found at [NVIDIA/nvidia-docker](https://github.com/NVIDIA/nvidia-docker).
 
