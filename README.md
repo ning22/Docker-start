@@ -55,7 +55,7 @@ docker container ls -q                                      # List container IDs
 docker stack rm <appname>                             # Tear down an application
 docker swarm leave --force      # Take down a single node swarm from the manager
 ```
-## change the docker installation directory
+### change the docker installation directory
 ```
 service docker stop
 ps faux
