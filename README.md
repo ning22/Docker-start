@@ -57,13 +57,14 @@ docker swarm leave --force      # Take down a single node swarm from the manager
 ```
 ### change the docker installation directory
 ```
-service docker stop
-ps faux
-ls /var/lib/docker/
-tar -zcC /var/lib docker > /mnt/pd0/var_lib_docker-backup-$(date +%s).tar.gz
-mv /var/lib/docker /mnt/pd0/docker
-ln -s /mnt/pd0/docker /var/lib/docker
-service docker start
+service docker stop                                                           # Stop docker
+ps faux                                               # Verify no docker process is running
+ls /var/lib/docker/                                                          # Double check
+tar -zcC /var/lib docker > /mnt/pd0/var_lib_docker-backup-$(date +%s).tar.gz #Make a backup
+mv /var/lib/docker /mnt/pd0/docker            # Move docker from original dir to target dir
+ln -s /mnt/pd0/docker /var/lib/docker                                      # Make a symlink
+ls /var/lib/docker/                          # Make sure it looks like it did before the mv
+service docker start                                                 # Start docker back up
 ```
 
 ### CUDA requirements:
