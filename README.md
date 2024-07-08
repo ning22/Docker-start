@@ -118,7 +118,9 @@ docker run --rm -it --init \
   -e NVIDIA_VISIBLE_DEVICES=0 \
   anibali/pytorch python3 main.py
 ```
-
+```
+docker run --rm -it --network host --p 8866:8866 --gpus all $IMAGE_NAME
+```
 ## Commit changes to a docker image:
 ```
 $ docker ps -a # display a list of launched containers
